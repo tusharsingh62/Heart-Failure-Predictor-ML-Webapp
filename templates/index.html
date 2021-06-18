@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='heartfailure-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+
+    <body>
+
+        <!-- Website Title -->
+    	<!--<div class="container"> -->
+        <div class="ml-container">
+            <h2 class='container-heading'><span class="heading_font">Heart Failure Predictor</span></h2>
+            <div class='description'>
+    			<p> Heart Failure Predictor Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+    <div style="color:red">
+        <form action="{{ url_for('predict')}}" method="POST">
+            <h2>Machine Learning Heart Failure Prediction Web Application</h2>
+            <h3>Age</h3>
+            <input id="first" name="age" type="number " placeholder="e.g: 49">
+            <h3>Creatinine Phosphokinase level in blood (mcg/L)</h3><br><input id="second" name="creatinine_phosphokinase" required="required" placeholder="e.g: 350">
+            <h3>Ejection Fraction?</h3><input id="third" name="ejection_fraction" required="required" placeholder="e.g: 38">
+            <h3>Platelet count of blood in kiloplatelets/mL?</h3><br><input id="fourth" name="platelet" required="required" placeholder="e.g: 21000.03">
+            <h3>Level of serum creatinine in the blood in mg/dL?</h3><br><input id="fourth" name="serum_creatinine" required="required" placeholder="e.g: 1.9">
+            <h3>Level of serum sodium in the blood in mEq/L?</h3><br><input id="fourth" name="serum_sodium" required="required" placeholder="e.g: 137">
+            <h3>Numer of times patient's follow-up visit for the disease in months?</h3><br><input id="fourth" name="time" required="required" placeholder="e.g: 8">
+            
+            <h3>Anaemia Diagonised? </h3><br><select name="anaemia" id="disease1" required="required">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+            </select>
+            <h3>Diabetes Diagonised? </h3><br><select name="diabetes" id="disease2" required="required">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+            </select>
+            <h3>High Blood Pressure</h3><br><select name="high_blood_pressure" id="Tension" required="required">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+            </select>
+            <h3>Sex</h3><br><select name="sex" id="person" required="required">
+                <option value="MALE">MALE</option>
+                <option value="FEMALE">FEMALE</option>
+            </select>
+            <h3>Smoking</h3><br><select name="smoking" id="habit" required="required">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+            </select>
+
+            <br><br><button id="sub" type="submit ">Predict</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+    <style>
+        body {
+            background-color: black;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html> 
