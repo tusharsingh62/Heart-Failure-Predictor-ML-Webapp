@@ -4,7 +4,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Diabetes Predictor</title>
+        <title>Heart Predictor</title>
         <link rel="shortcut icon" href="{{ url_for('static', filename='heartfailure-favicon.ico') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
         <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
@@ -26,7 +26,7 @@
 
     <div style="color:red">
         <form action="{{ url_for('predict')}}" method="POST">
-            <h2>Machine Learning Heart Failure Prediction Web Application</h2>
+            <h2>Attribute Information</h2>
             <h3>Age</h3>
             <input id="first" name="age" type="number " placeholder="e.g: 49">
             <h3>Creatinine Phosphokinase level in blood (mcg/L)</h3><br><input id="second" name="creatinine_phosphokinase" required="required" placeholder="e.g: 350">
@@ -44,15 +44,15 @@
                 <option value="YES">YES</option>
                 <option value="NO">NO</option>
             </select>
-            <h3>High Blood Pressure</h3><br><select name="high_blood_pressure" id="Tension" required="required">
+            <h3>High Blood Pressure?</h3><br><select name="high_blood_pressure" id="Tension" required="required">
                 <option value="YES">YES</option>
                 <option value="NO">NO</option>
             </select>
-            <h3>Sex</h3><br><select name="sex" id="person" required="required">
+            <h3>Sex?</h3><br><select name="sex" id="person" required="required">
                 <option value="MALE">MALE</option>
                 <option value="FEMALE">FEMALE</option>
             </select>
-            <h3>Smoking</h3><br><select name="smoking" id="habit" required="required">
+            <h3>Smoking?</h3><br><select name="smoking" id="habit" required="required">
                 <option value="YES">YES</option>
                 <option value="NO">NO</option>
             </select>
